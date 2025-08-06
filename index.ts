@@ -71,5 +71,19 @@ client.on('messageCreate', async (message) => {
   }
 });
 
+// Handle slash commands
+client.on('interactionCreate', async interaction => {
+    if (!interaction.isChatInputCommand()) return;
+
+    if (interaction.commandName === 'ping') {
+        await interaction.reply('Pong!');
+    }
+    
+    // Add this new block to handle the '/hi' command
+    if (interaction.commandName === 'hi') {
+        await interaction.reply('Hlo welcome to the Rohaz Bhalla server!');
+    }
+});
+
 // Start bot
 client.login(discordToken);

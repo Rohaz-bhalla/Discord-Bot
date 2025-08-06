@@ -8,6 +8,11 @@ const commands = [
     name: 'ping',
     description: 'Replies with Pong!',
   },
+
+  {
+    name : 'hi',
+    description : 'Replies with Welcome to Rohaz Bhalla server!'
+  }
 ];
 
 const rest = new REST({ version: '10' }).setToken(process.env.DISCORD_BOT_TOKEN!);
